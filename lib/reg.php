@@ -50,11 +50,11 @@ $salt = '56s89_)(hghdhjsjgj$f5)';
 $password = md5($salt . $password);
 
 // DB
-$pdo = new PDO('mysql:host=localhost;dbname=websitetest;port=3306', 'root');
+require "db.php";
 
 // INSERT
 $sql = "INSERT INTO users (login, username, email, password) VALUES (?, ?, ?, ?)";
 $query = $pdo->prepare($sql);
 $query->execute([$login, $username, $email, $password]);
 
-header('Location: /');
+header('Location: /WebTest2');

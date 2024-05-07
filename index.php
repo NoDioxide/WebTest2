@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TestWork</title>
-    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/WebTest2/css/main.css">
 </head>
 <body>
     <div class="wrapper">
@@ -20,26 +20,27 @@
         </div>
 
         <div class="container trending">
-            <a href="#" class="see-all">SEE ALL</a>
+            <a href="/WebTest2/trending.php" class="see-all">SEE ALL</a>
             <h3>Currently Trending Games</h3>
 
             <div class="games">
-                <div class="block">
-                    <img src="images/game1.svg" alt="">
-                    <span><img src="images/fire.svg" alt="">5342 Followers</span>
-                </div>
-                <div class="block">
-                    <img src="images/game2.svg" alt="">
-                    <span><img src="images/fire.svg" alt="">12350 Followers</span>
-                </div>
-                <div class="block">
-                    <img src="images/game3.svg" alt="">
-                    <span><img src="images/fire.svg" alt="">6436 Followers</span>
-                </div>
-                <div class="block">
-                    <img src="images/game4.svg" alt="">
-                    <span><img src="images/fire.svg" alt="">45235 Followers</span>
-                </div>
+                <?php
+                    //DB
+                    require_once "lib/db.php";
+
+                    //SQL
+                    $sql = 'SELECT * FROM trending ORDER BY id DESC LIMIT 4';
+                    $query = $pdo->prepare($sql);
+                    $query->execute();
+                    $games = $query->fetchAll(PDO::FETCH_OBJ);
+
+                    foreach($games as $el)
+                        echo 
+                        '<div class="block">
+                        <img src="/images/'.$el->image.'" alt="">
+                        <span><img src="/images/fire.svg" alt="">'.$el->followers.' Followers</span>
+                        </div>';
+                ?>
             </div>
         </div>
 
