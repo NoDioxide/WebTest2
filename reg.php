@@ -13,7 +13,6 @@
         <div class="container">
             <h2>Registration</h2>
             <p>Lorem Ipsum is simply dummy text of the printing .</p>
-
             <form method="post" action="/WebTest2/lib/reg.php">
                 <div class="inline">
                     <div>
