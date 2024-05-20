@@ -1,24 +1,23 @@
 <footer>
     <div class="blocks container">
         <div>
-            <span class="logo">logo</span>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+            <span class="logo">World yachts</span>
+            <p>Яхтенная верфь полного цикла «World yachts» основана в 1995 году.</p>
         </div>
             <div>
-                <h4>About Us</h4>
+                <h4>О нас</h4>
                 <ul>
-                    <li>Zeux</li>
-                    <li>Portfolio</li>
-                    <li>Careers</li>
-                    <li>Contact us</li>
+                    <li><a href="https://t.me/NoDioxide">Admin</a></li>
+                    <li><a href="/WebTest2/contacts.php">Contact us</a></li>
                 </ul>
             </div>
             <div>
-                <h4>Contact us</h4>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-                <p>+908 89097 890</p>
+                <h4>Свяжитесь с нами</h4>
+                <p>Мы находимся по адресу: г. Санкт-Петербург</p>
+                <p>+7 926 532 2009</p>
+                <p>Работаем с 10-20 в ПН-ПТ</p>
             </div>
     </div>
     <hr>
-    <p>Copyright ® 2021 Lorem All rights Rcerved</p>
+    <p>Copyright ® 2024 World yachts All rights Rcerved</p>
 </footer>

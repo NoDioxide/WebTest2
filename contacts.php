@@ -9,37 +9,60 @@
 <body>
     <?php require_once "blocks/header.php"?>
     <div class="container hero-contacts">
-        <h1>Lorem Ipsum is simply dummy text of the printing and.</h1>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+        <h1>Мы работаем по всему миру</h1>
+        <p>У нас свыше 20 партнёров из разных стран и 20 точек по всему миру в крупных городах!</p>
         <img src="images/Huge Global.png" alt="">
     </div>
     
     <div class="feedback">
         <div class="container">
-            <h2>Say hello</h2>
-            <p>Lorem Ipsum is simply dummy text of the printing .</p>
+            <h2>Скажите привет</h2>
+            <p>Заполнив поля снизу, вы поможете нашему проекту стать лучше!</p>
 
-            <form>
+            <form onsubmit="return validateForm()">
                 <div class="inline">
                     <div>
-                        <label>First Name</label>
-                        <input type="text">
+                        <label>Имя</label>
+                        <input type="text" id="firstName">
                     </div>
                     <div>
-                        <label>Last Name</label>
-                        <input type="text">
+                        <label>Фамилия</label>
+                        <input type="text" id="lastName">
                     </div>
                 </div>
-                <label>Email adress</label>
-                <input type="email" class="one-line">
+                <label>Почтовый адрес</label>
+                <input type="email" id="emailField" class="one-line">
 
-                <label>Message</label>
-                <textarea class="one-line"></textarea>
+                <label>Сообщение</label>
+                <textarea id="messageField" class="one-line"></textarea>
 
-                <button type="button">Get in touch</button>
+                <button type="submit">Отправить</button>
             </form>
         </div>
     </div>
+
     <?php require_once "blocks/footer.php"?>
+
+    <script>
+        function validateForm() {
+            let firstName = document.getElementById('firstName').value;
+            let lastName = document.getElementById('lastName').value;
+            let email = document.getElementById('emailField').value;
+            let message = document.getElementById('messageField').value;
+
+            if (firstName === '' || lastName === '' || email === '' || message === '') {
+                alert('Пожалуйста, заполните все поля.');
+                return false;
+            }
+
+            if (!email.includes('@')) {
+                alert('Адрес электронной почты неверный!');
+                return false;
+            }
+
+            alert('Спасибо! Ваше мнение очень многое значит для нас!');
+            return true;
+        }
+    </script>
 </body> 
 </html>

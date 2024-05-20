@@ -1,0 +1,1 @@
+Start-Process "C:\Users\nodio\Desktop\Gaish_Last\Gaish_4_step\obj\Debug\Gaish_4_step.exe"
