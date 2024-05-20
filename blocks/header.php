@@ -4,7 +4,7 @@
         <ul>
             <li class="active"><a href="/WebTest2">Home</a></li>
             <li><a href="/WebTest2/about.php">About us</a></li>
-            <li><a href="#">Portfolio</a></li>
+            <li><a href="/WebTest2/about.php">Portfolio</a></li>
             <li><a href="#">News</a></li>
 
             <?php
